@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="border-frame">
+      <img src="./img/Bezel-S7-45mm-Midnight@2x.svg" alt="" width="500px" />
+    </div>
+    <div id="red" class="main">
+      <div class="circles">
+        <div class="pieContainer">
+          <div class="pieBackground"></div>
+        </div>
+        <div class="pieContainer2">
+          <div class="pieBackground2"></div>
+        </div>
+      </div>
+      <div class="face-container">
+        <div class="time"><h2 id="time"></h2></div>
+        <div class="weather-container">
+          <h2 id="temp"></h2>
+          <img id="icon" alt="" width="50px" />
+          <h2 id="uvi"></h2>
+        </div>
+        <div class="reapply">
+          <a id="reset" href="#"><h2 id="sunTime"></h2></a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./weather.js"></script>
+</html>

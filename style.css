@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --height: 400px;
+  --width: 325px;
+  --d: 300px;
+  --d2: calc(var(--d) * 0.86666);
+  --r: calc(var(--d) / 2);
+  --r2: calc(var(--d2) / 2);
+}
+.main {
+  font-family: "Aldrich", sans-serif;
+  color: white;
+  height: var(--height);
+  width: var(--width);
+  overflow: hidden;
+  background: linear-gradient(213.88deg, #474747 1.34%, #000000 98.91%);
+}
+.border-frame {
+  position: absolute;
+  top: calc((var(--height) - var(--d)) / 2);
+  left: calc((var(--width) - var(--d)) / 2);
+  height: var(--d);
+  width: var(--d);
+  border: 5px solid red;
+  z-index: -10;
+}
+.pieContainer {
+  position: absolute;
+  top: calc((var(--height) - var(--d)) / 2);
+  left: calc((var(--width) - var(--d)) / 2);
+  height: var(--d);
+}
+
+.pieBackground {
+  position: absolute;
+  width: var(--d);
+  height: var(--d);
+  border-radius: 100%;
+}
+
+.pie {
+  /* transition: all 1s; */
+  position: absolute;
+  width: var(--d);
+  height: var(--d);
+  border-radius: 100%;
+  clip: rect(0px, var(--r), var(--d), 0px);
+}
+
+.hold {
+  position: absolute;
+  width: var(--d);
+  height: var(--d);
+  border-radius: 100%;
+  clip: rect(0px, var(--d), var(--d), var(--r));
+}
+
+.pieContainer2 {
+  position: absolute;
+  top: calc((var(--height) - var(--d2)) / 2);
+  left: calc((var(--width) - var(--d2)) / 2);
+  height: var(--d2);
+}
+
+.pieBackground2 {
+  position: absolute;
+  width: var(--d2);
+  left: 30px;
+  border-radius: 100%;
+}
+
+.pie2 {
+  position: absolute;
+  width: var(--d2);
+  height: var(--d2);
+  border-radius: 100%;
+  clip: rect(0px, var(--r2), var(--d2), 0px);
+}
+
+.hold2 {
+  position: absolute;
+  width: var(--d2);
+  height: var(--d2);
+  border-radius: 100%;
+  clip: rect(0px, var(--d2), var(--d2), var(--r2));
+}
+
+.face-container {
+  font-size: clamp(0.25rem, 4vw, 1rem);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: calc((var(--height) - var(--d2)) / 2);
+  left: calc((var(--width) - var(--d2)) / 2);
+  height: calc(var(--d2));
+  width: calc(var(--d2));
+}
+#icon {
+  width: 200px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+    brightness(102%) contrast(102%);
+  margin-left: auto;
+}
+#temp,
+#uvi,
+#time,
+#sunTime {
+  margin: auto;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 30%;
+}
+.time,
+.reapply {
+  margin-top: 10%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
